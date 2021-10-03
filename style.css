@@ -1,0 +1,270 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+* {
+  --bgcolor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: #828286;
+  --main-text-color: #333333;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #6f5de7;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #f1f5fd;
+  color: #000;
+}
+
+
+.btn{
+	text-decoration: none;
+}
+
+
+.container{
+	background-color: #f1f5fd;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow:10px -5px 10px rgb(0, 0, 0,0.2);
+}
+
+.hidden .btn-link{
+text-decoration: none;	
+}
+
+.edit{
+text-decoration: none;
+padding-right: 20px;
+}
+
+.object-cover{
+	border-radius: 20px;
+}
+
+
+a { text-decoration: none; 
+	color: var(--text-clr); } 
+
+a:hover { text-decoration: none; 
+	color: var(--text-clr); } 
+
+	.clone{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.logo{
+	height: 150px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-type{
+	float: right;
+	margin-top: 60px;
+}
+
+.main-type li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+}
+
+.main-type li a{
+	padding: 5px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight: 100;
+		transition: 0.2s
+}
+
+.main-type li a:hover{
+	border-bottom: 2px solid #bf55ec;
+}
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+
+}
+
+.nav{
+	background-color: transparent;
+	border: 1px solid #000;
+}
+
+
+.nav:hover{
+	background-color: #bf55ec;
+}
+
+.mobile-icon{
+	display: none;
+}
+/*
+responsive code css start*/
+@media only screen and (max-width: 768px){
+	.mobile-icon{
+		display: inline-block;
+		float: right !important;
+		margin-top: 30px;
+	    padding-right: 30px;
+	}
+
+	.object-cover{
+		opacity: 0;
+	}
+
+	.main-type{float: left;}
+
+	.main-type li{
+		display: block;
+		margin-top: 10px;
+	}
+
+}
+}
+
+@media only screen and (min-width: 998px){
+	.object-cover{
+		opacity: 0;
+	}
+}
+
+
+/*tail wind style start*/
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
